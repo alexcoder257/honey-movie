@@ -27,7 +27,7 @@ export default async function RootLayout({
           <link rel="icon" href="/images/logo-icon.png" sizes="any" />
         </head>
         <body
-          className={`${poppins.className} bg-black bg-no-repeat bg-cover h-screen overflow-y-auto`}
+          className={`${poppins.className} bg-black bg-no-repeat bg-cover h-screen w-screen overflow-hidden`}
           style={{
             backgroundImage: "url(/images/background.png)",
           }}

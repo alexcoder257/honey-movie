@@ -16,6 +16,8 @@ export default {
     facebook({
       clientId: process.env.FACEBOOK_CLIENT_ID,
       clientSecret: process.env.FACEBOOKK_CLIENT_SECRET,
+      authorization:
+        "https://www.facebook.com/v10.0/dialog/oauth?scope=email,public_profile",
     }),
   ],
 } satisfies NextAuthConfig;

@@ -1,4 +1,4 @@
-import { MovieApi, TVSeriesApi } from "@/api";
+import { TVSeriesApi } from "@/api";
 import ListScreen from "@/components/movies/ListScreen";
 import { CardType } from "@/constants/enum";
 import { Genre } from "@/types";

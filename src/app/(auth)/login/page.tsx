@@ -1,5 +1,5 @@
-import CardWrapper from "@/components/auth/CardWrapper";
 import React from "react";
+import CardWrapper from "@/components/auth/CardWrapper";
 
 export default function LoginPage() {
   return (

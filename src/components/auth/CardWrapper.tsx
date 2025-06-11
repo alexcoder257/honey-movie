@@ -1,10 +1,10 @@
-import { signIn } from "@/auth";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebook, FaGithub } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { FcGoogle } from "react-icons/fc";
 import { Button } from "../ui/button";
 import { Card, CardHeader, CardTitle } from "../ui/card";
+import { signIn } from "@/auth";
 
 type Props = {
   title: string;

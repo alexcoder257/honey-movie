@@ -1,4 +1,4 @@
-import { MovieBase, TVSeriesAndMovies } from "@/types";
+import { TVSeriesAndMovies } from "@/types";
 import React from "react";
 import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
 import CardCommon from "../CardCommon";
@@ -17,7 +17,7 @@ import Link from "next/link";
 type Props = {
   data: TVSeriesAndMovies[];
   title: string;
-  type: string;
+  type: CardType;
 };
 
 export default function ListScreen({ data, title, type }: Props) {
@@ -30,7 +30,7 @@ export default function ListScreen({ data, title, type }: Props) {
             <CarouselItem key={item.id} className="basis-auto">
               <div className="flex flex-col gap-4 items-start w-[195px] md:w-[245px] lg:w-[295px] text-sm lg:text-base">
                 <Link
-                  href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${
+                  href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${
                     item.id
                   }`}
                 >

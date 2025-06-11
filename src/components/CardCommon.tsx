@@ -1,16 +1,16 @@
 import React from "react";
-import { Card } from "./ui/card";
-import StarRating from "./star/StarRating";
-import { Genre } from "@/types";
-import { Button } from "./ui/button";
-import { ZoomIn } from "lucide-react";
 import Link from "next/link";
+import { ZoomIn } from "lucide-react";
+import { Card } from "./ui/card";
+import { Button } from "./ui/button";
+import StarRating from "./star/StarRating";
 import { CardType } from "@/constants/enum";
+import { Genre } from "@/types";
 
 type Props = {
   id: number;
   size: "sm" | "md" | "lg";
-  type: string;
+  type: CardType;
   img_url: string;
   genre?: Genre;
   title?: string;
@@ -74,7 +74,7 @@ export default function CardCommon({
       )}
       {hasMoreInfoButton && (
         <Link
-          href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${id}`}
+          href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${id}`}
         >
           <Button
             variant={"outline"}
@@ -87,7 +87,7 @@ export default function CardCommon({
       {hasWatchButton && (
         <Link
           href={`/${
-            type == CardType.MOVIES ? "movie" : "tv-series"
+            type === CardType.MOVIES ? "movie" : "tv-series"
           }/${id}/watch`}
         >
           <Button

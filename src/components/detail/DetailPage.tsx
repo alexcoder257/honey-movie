@@ -3,7 +3,6 @@ import { getImageURL } from "@/utils";
 import React from "react";
 import BackHome from "../share/BackHome";
 import StarRating from "../star/StarRating";
-import { FaImdb } from "react-icons/fa";
 import Image from "next/image";
 import {
   Tooltip,
@@ -17,7 +16,7 @@ import { CardType } from "@/constants/enum";
 
 type Props = {
   data: DetailContent;
-  type: string;
+  type: CardType;
 };
 export default function DetailPage({ data, type }: Props) {
   return (
@@ -32,7 +31,7 @@ export default function DetailPage({ data, type }: Props) {
         <div className="grid gap-2 md:gap-8 lg:gap-[50px] xl:gap-[100px] grid-rows-2 grid-cols-3 text-white mt-12 ml-8">
           <div className="flex flex-col gap-4 col-span-3 row-start-2 md:row-start-1 md:col-span-2">
             <div className="font-semibold text-2xl lg:text-4xl">
-              {type == CardType.MOVIES ? data.title : data.name}
+              {type === CardType.MOVIES ? data.title : data.name}
             </div>
             <div>
               <StarRating rating={data.vote_average / 2} />
@@ -60,7 +59,7 @@ export default function DetailPage({ data, type }: Props) {
               </Tooltip>
             </TooltipProvider>
             <Link
-              href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${
+              href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${
                 data.id
               }/watch`}
               className="ml-auto mt-4"
@@ -71,7 +70,7 @@ export default function DetailPage({ data, type }: Props) {
             </Link>
           </div>
           <Link
-            href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${
+            href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${
               data.id
             }/watch`}
           >

@@ -13,7 +13,7 @@ import { CardType } from "@/constants/enum";
 type Props = {
   genres: Genre[];
   title: string;
-  type: string;
+  type: CardType;
 };
 
 export default function ListGenre({ genres, title, type }: Props) {
@@ -30,7 +30,7 @@ export default function ListGenre({ genres, title, type }: Props) {
             <Link
               key={item.id}
               href={`/${
-                type == CardType.MOVIES ? "movie" : "tv-series"
+                type === CardType.MOVIES ? "movie" : "tv-series"
               }/genres/${item.id}`}
             >
               <CarouselItem>

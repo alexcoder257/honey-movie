@@ -8,7 +8,7 @@ type Props = {
   data: TVSeriesAndMovies[];
   genres?: Genre[];
   title: string;
-  type: string;
+  type: CardType;
 };
 export default function CommonList({ data, genres = [], title, type }: Props) {
   return (

@@ -1,10 +1,10 @@
 "use client";
-import { Button } from "@/components/ui/button";
-import useCurrentUser from "@/hooks/useCurrentUser";
+import { Fragment } from "react";
 import { signOut } from "next-auth/react";
 import Image from "next/image";
-import { Fragment } from "react";
 import { LuPencilLine } from "react-icons/lu";
+import { Button } from "@/components/ui/button";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 export default function SettingPage() {
   const user = useCurrentUser();

@@ -1,9 +1,8 @@
 "use client";
 
-import useCurrentUser from "@/hooks/useCurrentUser";
+import { Fragment, useState } from "react";
 import { signOut } from "next-auth/react";
 import Link from "next/link";
-import { Fragment, useState } from "react";
 import { FaRegUser } from "react-icons/fa";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import { IoSettingsOutline } from "react-icons/io5";
@@ -16,6 +15,7 @@ import {
   DropdownMenuLabel,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
+import useCurrentUser from "@/hooks/useCurrentUser";
 
 export default function UserInfo() {
   const [dropdownToggle, setDropdownToggle] = useState(true);

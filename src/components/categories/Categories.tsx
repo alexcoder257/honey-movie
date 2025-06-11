@@ -1,9 +1,6 @@
-import { CardType } from "@/constants/enum";
-import { MovieBase } from "@/types";
-import { getImageURL } from "@/utils";
+import React from "react";
+import Link from "next/link";
 import CardCommon from "../CardCommon";
-import { GrCaretNext } from "react-icons/gr";
-
 import {
   Carousel,
   CarouselContent,
@@ -11,13 +8,15 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "../ui/carousel";
-import Link from "next/link";
+import { CardType } from "@/constants/enum";
+import { MovieBase } from "@/types";
+import { getImageURL } from "@/utils";
 
 type Props = {
   title: string;
   data: MovieBase[];
   href: string;
-  type: string;
+  type: CardType;
 };
 export default function Categories({ title, data, href, type }: Props) {
   return (

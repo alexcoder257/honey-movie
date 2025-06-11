@@ -10,7 +10,7 @@ import { CardType } from "@/constants/enum";
 type Props = {
   data: TVSeriesAndMovies[];
   url: string;
-  type: string;
+  type: CardType;
 };
 
 export default function WatchScreen({ data, url, type }: Props) {

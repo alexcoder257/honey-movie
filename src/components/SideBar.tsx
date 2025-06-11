@@ -1,19 +1,16 @@
+import React, { Fragment } from "react";
 import Image from "next/image";
-import { BiCameraMovie } from "react-icons/bi";
-import { MdMovieEdit, MdOutlineLocalMovies } from "react-icons/md";
-import { RiMovie2Line, RiMovieLine } from "react-icons/ri";
-import MenuItem from "./MenuItem";
-import { PiTelevision } from "react-icons/pi";
-import { FaRegStar } from "react-icons/fa";
-import { FaEarthAmericas } from "react-icons/fa6";
 import Link from "next/link";
+import { BiCameraMovie } from "react-icons/bi";
+import { FaRegStar, FaRegUser } from "react-icons/fa";
+import { FaEarthAmericas } from "react-icons/fa6";
 import { IoSettingsOutline } from "react-icons/io5";
+import { MdMovieEdit, MdOutlineLocalMovies } from "react-icons/md";
+import { PiTelevision } from "react-icons/pi";
+import { RiMovie2Line, RiMovieLine, RiLoginBoxLine } from "react-icons/ri";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
-import { FaRegUser } from "react-icons/fa";
+import MenuItem from "./MenuItem";
 import { currentUser } from "@/actions";
-import { DropdownMenu, DropdownMenuTrigger } from "./ui/dropdown-menu";
-import { RiLoginBoxLine } from "react-icons/ri";
-import { Fragment } from "react";
 
 const movies = [
   {

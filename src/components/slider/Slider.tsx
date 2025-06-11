@@ -15,7 +15,7 @@ import {
 
 type Props = {
   data: TVSeriesAndMovies[];
-  type: string;
+  type: CardType;
 };
 
 export default async function Slider({ data, type }: Props) {
@@ -37,10 +37,10 @@ export default async function Slider({ data, type }: Props) {
               style={{ objectFit: "cover", objectPosition: "center" }}
             />
             <div className="absolute top-10 left-12 text-white font-semibold text-2xl">
-              {type == CardType.MOVIES ? item.title : item.name}
+              {type === CardType.MOVIES ? item.title : item.name}
             </div>
             <Link
-              href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${
+              href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${
                 item.id
               }`}
             >
@@ -53,7 +53,7 @@ export default async function Slider({ data, type }: Props) {
               </Button>
             </Link>
             <Link
-              href={`/${type == CardType.MOVIES ? "movie" : "tv-series"}/${
+              href={`/${type === CardType.MOVIES ? "movie" : "tv-series"}/${
                 item.id
               }/watch`}
             >

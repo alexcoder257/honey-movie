@@ -1,6 +1,6 @@
 "use client";
-import BackHome from "@/components/share/BackHome";
 import React from "react";
+import BackHome from "@/components/share/BackHome";
 export default function ErrorPage() {
   return (
     <div className="text-white flex items-center h-screen justify-center">

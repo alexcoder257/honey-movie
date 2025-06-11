@@ -69,14 +69,14 @@ export const MovieApi = {
     );
     return res.json();
   },
-  getUrlMovie: async function(id:Number){
+  getUrlMovie: async function(id: number){
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/movie/${id}/videos`,
       options
     );
     return res.json()
   },
-  getSimilarMovie:async function(id:Number){
+  getSimilarMovie:async function(id: number){
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/movie/${id}/similar`,
       options
@@ -135,14 +135,14 @@ export const TVSeriesApi = {
     );
     return res.json();
   },
-  getUrlTV: async function(id:Number){
+  getUrlTV: async function(id: number){
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/tv/${id}/videos`,
       options
     );
     return res.json()
   },
-  getSimilarTV:async function(id:Number){
+  getSimilarTV:async function(id: number){
     const res = await fetch(
       `${process.env.NEXT_PUBLIC_API_BASE_URL}/tv/${id}/similar`,
       options

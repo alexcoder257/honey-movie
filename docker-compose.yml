@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  honey-movie:
+    platform: linux/amd64
+    container_name: ${CONTAINER_NAME}
+    image: ${CONTAINER_NAME}
+    build:
+      dockerfile: Dockerfile
+      args:
+        AUTH_SECRET: ${AUTH_SECRET}
+        GITHUB_CLIENT_ID: ${GITHUB_CLIENT_ID}
+        GITHUB_CLIENT_SECRET: ${GITHUB_CLIENT_SECRET}
+        GOOGLE_CLIENT_ID: ${GOOGLE_CLIENT_ID}
+        GOOGLE_CLIENT_SECRET: ${GOOGLE_CLIENT_SECRET}
+        FACEBOOK_CLIENT_ID: ${FACEBOOK_CLIENT_ID}
+        FACEBOOK_CLIENT_SECRET: ${FACEBOOK_CLIENT_SECRET}
+        NEXT_PUBLIC_API_BASE_URL: ${NEXT_PUBLIC_API_BASE_URL}
+        NEXT_PUBLIC_API_ACCESS_TOKEN: ${NEXT_PUBLIC_API_ACCESS_TOKEN}
+        NEXT_YOUTUBE_BASE_VIDEO: ${NEXT_YOUTUBE_BASE_VIDEO}
+        NEXT_PUBLIC_IMAGE_BASE_URL: ${NEXT_PUBLIC_IMAGE_BASE_URL}
+    restart: always
+    ports:
+      - "3000:3000"
+    networks:
+      - honey-movie-network
+
+
+
+networks:
+  honey-movie-network:
+    external: false

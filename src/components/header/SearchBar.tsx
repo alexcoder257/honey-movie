@@ -81,7 +81,7 @@ export default function SearchBar() {
       ignore = true;
       clearInterval(progressInterval);
     };
-  }, [keyword]);
+  }, [keyword, isMovieScreen]);
 
   return (
     <div className="flex gap-4 items-center col-span-3 sm:col-span-2 lg:col-span-1">

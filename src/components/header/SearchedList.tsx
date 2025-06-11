@@ -8,7 +8,7 @@ import Link from "next/link";
 
 type Props = {
   data: TVSeriesAndMovies[];
-  type: string;
+  type: CardType;
 };
 
 export default function SearchedList({ data, type }: Props) {

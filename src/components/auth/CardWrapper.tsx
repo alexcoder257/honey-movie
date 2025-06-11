@@ -24,7 +24,7 @@ export default function CardWrapper({ title, titleFooter, hrefFooter }: Props) {
         />
         <CardTitle className="font-normal pb-6 text-white">{title}</CardTitle>
         <div className="w-[300px] flex flex-col gap-4">
-          {/* <form
+          <form
             action={async () => {
               "use server";
               await signIn("facebook");
@@ -39,7 +39,7 @@ export default function CardWrapper({ title, titleFooter, hrefFooter }: Props) {
               <FaFacebook className="text-sky-600 text-xl" />
               Continue with Facebook
             </Button>
-          </form> */}
+          </form>
           <form
             action={async () => {
               "use server";

@@ -9,7 +9,7 @@ export default function page() {
         these steps:
       </p>
       <ol>
-        <li>Log out of the app by clicking "Logout" in the settings menu.</li>
+        <li>Log out of the app by clicking &quot;Logout&quot; in the settings menu.</li>
         <li>
           If you have further concerns about your data, please contact us at{" "}
           <a href="mailto:alexcoder257@gmail.com" className="text-blue-500">
